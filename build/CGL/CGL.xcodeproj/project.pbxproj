@@ -1,0 +1,1475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1DDBE4CC92DB4AFD8D951E14 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D059E7EE300A4397A4B138E9 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				467A97CF0C984555BA1DB4B4 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		734B9CBFF25147F9BA184227 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 62574C11A61E43D3A16AC72F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				D296A2455AC44F4D95A0F4C5 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		8CDF8AF101A44740AE0B7255 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 557A542642A74C558FDE181C /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				11054AF2688143A8B075FA44 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				9580AD4793C94BA4A00BCC0D /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		D7057E91860542E08D54118B /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D0BBC574A22348EAB89B85D6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				BF42074A3C67403999BE3831 /* CMake Rules */,
+			);
+			dependencies = (
+				A8894C2C536F4AF1AE17E656 /* PBXTargetDependency */,
+				834A0CC19F0E4B7387E9F1EA /* PBXTargetDependency */,
+				5226C96BC66E4BFB9A9BCA7D /* PBXTargetDependency */,
+				3BDFBCE78547446583E921C8 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0D53F33958DC451D823E5F57 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXBuildFile; fileRef = 80EDF57696014360A83206BC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/visualinfo.c */; };
+		148891FF250943838676B35E /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 406577D2A3D940DFAF97A892 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_time.c */; };
+		1B55ACE9DA204C1084EBDFDF /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/complex.cpp */ = {isa = PBXBuildFile; fileRef = D9D0679557B34CFA8E1A0E9F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/complex.cpp */; };
+		2052B3B953C54062BB4F1608 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdtext.cpp */ = {isa = PBXBuildFile; fileRef = 458204DE7ABF4AD588EA793D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdtext.cpp */; };
+		21B8D0FF0FBB4C328D06F22C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXBuildFile; fileRef = 5AE3DAB72CCA430DA6B95A5D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glewinfo.c */; };
+		2AA5C47A61DF42089E360B1D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdfont.cpp */ = {isa = PBXBuildFile; fileRef = B1810EBE0C954842A3A2D32B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdfont.cpp */; };
+		347D55E8729049E09297CA9B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/lodepng.cpp */ = {isa = PBXBuildFile; fileRef = F312318FB37346AD8EC7E552 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/lodepng.cpp */; };
+		3DD355B791F643C9B1D2944A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 6FDCB385170947D3B3227A2B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		468B37E10E034617A6945B5D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 323963B06CEC45B0B9D97745 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.h */; };
+		49E4D5B55C154A14AAD2F083 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 020CE568276D4CB6A5A8D592 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/CMakeLists.txt */; };
+		4E8F57F007144E7B8EEE40D6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 209B1EC9DB5040078A8217C3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.m */; };
+		61BA2A3893D64DCE96E91F50 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 1A0D60240C604F6A96D3EDE0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3native.h */; };
+		6329CDD277E4491E96AB077A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/quaternion.cpp */ = {isa = PBXBuildFile; fileRef = B677403A297F4F5F8CDA8DF8 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/quaternion.cpp */; };
+		66C2A9D09F9148A6B570590B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/spectrum.cpp */ = {isa = PBXBuildFile; fileRef = FA0BD7FCB999487EBD5926A9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/spectrum.cpp */; };
+		671814DF2AFA410CA499BB40 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix3x3.cpp */ = {isa = PBXBuildFile; fileRef = 98D53568772F476A95F23A31 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix3x3.cpp */; };
+		6AE79273C7C14C16AC09F48D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/color.cpp */ = {isa = PBXBuildFile; fileRef = 6F003418A1304F7AB6BCEF73 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/color.cpp */; };
+		6F161B7ADD5E45F7BC95AEA6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = BF56C22D7AE84107B0C042AC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.m */; };
+		77EFD4C4A12D4E1FBA98C94E /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = D1A87B3F6EF048BDBEAA2AD3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.h */; };
+		784D331F81484537AC80BAA9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = A6ADE45A01904C3CAE99426D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_monitor.m */; };
+		7A09A65B50084F59A5C34B53 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/path.cpp */ = {isa = PBXBuildFile; fileRef = 9E93BB809A07480E8A72F2D5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/path.cpp */; };
+		7C65CF70962F4FACB7585FED /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = B872B345E4C44A22B81C6682 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.c */; };
+		7D196DCA596444CDB220CD9E /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 3B6E7E3E540D486888F6694A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		86BA7AAA67284772B4BCE263 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/viewer.cpp */ = {isa = PBXBuildFile; fileRef = A67084D9ED5543218EBF3894 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/viewer.cpp */; };
+		86BD770BF81A414DB6028E03 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 4A654657383F488A997D0D78 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		89F39356B9BE41828997EBD6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = 9E2A8F3D7EC443A591DD0953 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/tinyxml2.cpp */; };
+		8A802B5A6D5349099E97F104 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 68B2F55F9E034990ABF01EA4 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src/glfw_config.h */; };
+		8BFF9B4715BC4B0FABA32EAD /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector4D.cpp */ = {isa = PBXBuildFile; fileRef = F987320764E3430183294BA6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector4D.cpp */; };
+		90DE02DC222A4D7DA743B198 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 431D758D042D47708FCEF5D3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/mappings.h */; };
+		9577D6B25FA0482189F7162C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/base64.cpp */ = {isa = PBXBuildFile; fileRef = 541FC4EFB47042129E437BFC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/base64.cpp */; };
+		9FD48862AF504C3E838B8B16 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 95EA715B23E3464DA29AE51D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_init.m */; };
+		A22719C76F28478DB55B2A18 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector2D.cpp */ = {isa = PBXBuildFile; fileRef = 2790EA5F2884490CA16FD1E0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector2D.cpp */; };
+		B3A9B5F37865424CA1AB5A74 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = F644A329C7BB41C6B6358B44 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.h */; };
+		B5E87F11AC7E4829A1CD8D6A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 356A96EA8DDA4C269C258BE9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/CMakeLists.txt */; };
+		BE06F8522D9A414F9836E850 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 70B20CFB9E064E2DA6B74AA7 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3.h */; };
+		C12ECD20011540D8B238C996 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix4x4.cpp */ = {isa = PBXBuildFile; fileRef = C30D8E3DCF0846BDB8BA54BD /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix4x4.cpp */; };
+		C78B956D243A41FDA46307B5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 44A2F4C9918F4BD6860756D6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_window.m */; };
+		CC45340360D94440B89414B8 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 77DF365E0B9F4D4FB208AF9B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */; };
+		CE28F557A08F464BB5F08787 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 57696F19DC6F463CAA23F14B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		CFB84AF270594967A8842AD5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = A1D8EF0DD8E04BC58A5843DB /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		D214527CCE394BC6864A0208 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = BCE222F658E640B2AEE598DF /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glew.c */; };
+		D58E17AB77D84EA7926635D0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector3D.cpp */ = {isa = PBXBuildFile; fileRef = 648E726218134E4F98104978 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector3D.cpp */; };
+		D67E55FD28A2488ABB5AEBB5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 70E854A201E24ED4BDF2DB64 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		DA2B5886453D4B41AA663C60 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 794856296C904E9FB8F5BD36 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_platform.h */; };
+		E2E39CF5074340AD9891D2E7 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 524563942D5249B1AD61F44C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.h */; };
+		EB54CE515E834346B248EEA8 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 7F0F8D00F81F489E8F7D60F6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.h */; };
+		F07592F51A9C4891989F2A0B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = B4CCE796F3BB4585853ACC97 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/internal.h */; };
+		FD3E196540B84C5DB1818FAA /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 7407B7C0BE7047E69349F63F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		FDEE11E31D99436D82B69718 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 61F0B4888AB24DBF83BD42C2 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		2CCEAA232E224AC898436CE3 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		61BE779D80034AF5959AEFE4 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		9BA704A6F3C94DFDAB48100F /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		D342A2B1DDA042C88785BA69 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		03D4D0C8EA534B5F9F948E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3538BD45648B4DF0AFA8EF66;
+			remoteInfo = glew;
+		};
+		0444657F6EF4409BBCCA569F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 734B9CBFF25147F9BA184227;
+			remoteInfo = ZERO_CHECK;
+		};
+		446F7C6073974F24A029E562 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7057E91860542E08D54118B;
+			remoteInfo = ALL_BUILD;
+		};
+		BE13094182C84D49A279D24B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3538BD45648B4DF0AFA8EF66;
+			remoteInfo = glew;
+		};
+		C99AA38659E24A5B84FA8B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E035A659EF146E380C8F01C;
+			remoteInfo = glfw;
+		};
+		CF7F99D7A0714F5FAD51CD4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12BE30ED5D14138BF8F6354;
+			remoteInfo = CGL;
+		};
+		DDCAF3CD0CD249C2A050296F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 734B9CBFF25147F9BA184227;
+			remoteInfo = ZERO_CHECK;
+		};
+		F6AD9047F01348E0BEB7CDD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6484B0F791D8460CB611582E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E035A659EF146E380C8F01C;
+			remoteInfo = glfw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020CE568276D4CB6A5A8D592 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		04DFC565469D418C9F5DF49C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		16BF5B00D4C7435D92BA1FE9 /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0D60240C604F6A96D3EDE0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = deps/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		209B1EC9DB5040078A8217C3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = deps/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		2790EA5F2884490CA16FD1E0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector2D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector2D.cpp; path = src/vector2D.cpp; sourceTree = SOURCE_ROOT; };
+		323963B06CEC45B0B9D97745 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = deps/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		356A96EA8DDA4C269C258BE9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3A96785563B543BE97CD9CFC /* CGL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B6E7E3E540D486888F6694A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = deps/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		406577D2A3D940DFAF97A892 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = deps/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		431D758D042D47708FCEF5D3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = deps/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
+		44A2F4C9918F4BD6860756D6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = deps/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		458204DE7ABF4AD588EA793D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdtext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdtext.cpp; path = src/osdtext.cpp; sourceTree = SOURCE_ROOT; };
+		4A654657383F488A997D0D78 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = deps/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		524563942D5249B1AD61F44C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = deps/glfw/src/egl_context.h; sourceTree = SOURCE_ROOT; };
+		541FC4EFB47042129E437BFC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		57696F19DC6F463CAA23F14B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = deps/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		5AE3DAB72CCA430DA6B95A5D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glewinfo.c; path = deps/glew/src/glewinfo.c; sourceTree = SOURCE_ROOT; };
+		61F0B4888AB24DBF83BD42C2 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = deps/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		648E726218134E4F98104978 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3D.cpp; path = src/vector3D.cpp; sourceTree = SOURCE_ROOT; };
+		68B2F55F9E034990ABF01EA4 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../build/CGL/deps/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		6F003418A1304F7AB6BCEF73 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = color.cpp; path = src/color.cpp; sourceTree = SOURCE_ROOT; };
+		6FDCB385170947D3B3227A2B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = deps/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		70B20CFB9E064E2DA6B74AA7 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = deps/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		70E854A201E24ED4BDF2DB64 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = deps/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		724E6F84E9104F129476D5CB /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7407B7C0BE7047E69349F63F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = deps/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		77DF365E0B9F4D4FB208AF9B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		794856296C904E9FB8F5BD36 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = deps/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		7F0F8D00F81F489E8F7D60F6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = deps/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		80EDF57696014360A83206BC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = visualinfo.c; path = deps/glew/src/visualinfo.c; sourceTree = SOURCE_ROOT; };
+		95EA715B23E3464DA29AE51D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = deps/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		98D53568772F476A95F23A31 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix3x3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix3x3.cpp; path = src/matrix3x3.cpp; sourceTree = SOURCE_ROOT; };
+		9E2A8F3D7EC443A591DD0953 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		9E93BB809A07480E8A72F2D5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = src/path.cpp; sourceTree = SOURCE_ROOT; };
+		A1D8EF0DD8E04BC58A5843DB /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = deps/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		A67084D9ED5543218EBF3894 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/viewer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = viewer.cpp; path = src/viewer.cpp; sourceTree = SOURCE_ROOT; };
+		A6ADE45A01904C3CAE99426D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = deps/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		B1810EBE0C954842A3A2D32B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdfont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdfont.cpp; path = src/osdfont.cpp; sourceTree = SOURCE_ROOT; };
+		B4CCE796F3BB4585853ACC97 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = deps/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		B677403A297F4F5F8CDA8DF8 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/quaternion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = quaternion.cpp; path = src/quaternion.cpp; sourceTree = SOURCE_ROOT; };
+		B872B345E4C44A22B81C6682 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = deps/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		BCE222F658E640B2AEE598DF /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = deps/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		BF56C22D7AE84107B0C042AC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = deps/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		C30D8E3DCF0846BDB8BA54BD /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix4x4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix4x4.cpp; path = src/matrix4x4.cpp; sourceTree = SOURCE_ROOT; };
+		D1A87B3F6EF048BDBEAA2AD3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = deps/glfw/src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		D9D0679557B34CFA8E1A0E9F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/complex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complex.cpp; path = src/complex.cpp; sourceTree = SOURCE_ROOT; };
+		DB2320F7F89840BE8E9EAD3D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F312318FB37346AD8EC7E552 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/lodepng.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lodepng.cpp; path = src/lodepng.cpp; sourceTree = SOURCE_ROOT; };
+		F644A329C7BB41C6B6358B44 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = deps/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		F987320764E3430183294BA6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector4D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector4D.cpp; path = src/vector4D.cpp; sourceTree = SOURCE_ROOT; };
+		FA0BD7FCB999487EBD5926A9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A5A03154CC443A9A4DB1D33 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				B9CDE4827281412C9608879C /* Header Files */,
+				DBA4DD503ADB4DFFBB67352E /* Source Files */,
+				356A96EA8DDA4C269C258BE9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		17C960A3BDBB434FA2A9F322 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				541FC4EFB47042129E437BFC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/base64.cpp */,
+				6F003418A1304F7AB6BCEF73 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/color.cpp */,
+				D9D0679557B34CFA8E1A0E9F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/complex.cpp */,
+				F312318FB37346AD8EC7E552 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/lodepng.cpp */,
+				98D53568772F476A95F23A31 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix3x3.cpp */,
+				C30D8E3DCF0846BDB8BA54BD /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix4x4.cpp */,
+				B1810EBE0C954842A3A2D32B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdfont.cpp */,
+				458204DE7ABF4AD588EA793D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdtext.cpp */,
+				9E93BB809A07480E8A72F2D5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/path.cpp */,
+				B677403A297F4F5F8CDA8DF8 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/quaternion.cpp */,
+				FA0BD7FCB999487EBD5926A9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/spectrum.cpp */,
+				9E2A8F3D7EC443A591DD0953 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/tinyxml2.cpp */,
+				2790EA5F2884490CA16FD1E0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector2D.cpp */,
+				648E726218134E4F98104978 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector3D.cpp */,
+				F987320764E3430183294BA6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector4D.cpp */,
+				A67084D9ED5543218EBF3894 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/viewer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		21039654C77A41929BED2E80 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				69F502EAC40A4204B516248F /* uninstall */,
+				0A5A03154CC443A9A4DB1D33 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		2F4433EFB83D47E39BFC968A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A96785563B543BE97CD9CFC /* CGL */,
+				16BF5B00D4C7435D92BA1FE9 /* glew */,
+				724E6F84E9104F129476D5CB /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		558EF4FF8056494488D417F0 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				A5A54C02E94543FCAFD574BC /* CMake Rules */,
+				04DFC565469D418C9F5DF49C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		69F502EAC40A4204B516248F /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				7AE94F010D7F4E948DCE29B4 /* CMake Rules */,
+				DB2320F7F89840BE8E9EAD3D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		7AE94F010D7F4E948DCE29B4 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A34AF3BCDAF5462E945081B8 /* CGL */ = {
+			isa = PBXGroup;
+			children = (
+				17C960A3BDBB434FA2A9F322 /* Source Files */,
+				77DF365E0B9F4D4FB208AF9B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/CMakeLists.txt */,
+			);
+			name = CGL;
+			sourceTree = "<group>";
+		};
+		A5A54C02E94543FCAFD574BC /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B9CDE4827281412C9608879C /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				70B20CFB9E064E2DA6B74AA7 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3.h */,
+				1A0D60240C604F6A96D3EDE0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include/GLFW/glfw3native.h */,
+				7F0F8D00F81F489E8F7D60F6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.h */,
+				794856296C904E9FB8F5BD36 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_platform.h */,
+				524563942D5249B1AD61F44C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.h */,
+				B4CCE796F3BB4585853ACC97 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/internal.h */,
+				431D758D042D47708FCEF5D3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/mappings.h */,
+				F644A329C7BB41C6B6358B44 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.h */,
+				D1A87B3F6EF048BDBEAA2AD3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.h */,
+				323963B06CEC45B0B9D97745 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.h */,
+				68B2F55F9E034990ABF01EA4 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		D8469A70A9D4402DA3995337 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCE222F658E640B2AEE598DF /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glew.c */,
+				5AE3DAB72CCA430DA6B95A5D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glewinfo.c */,
+				80EDF57696014360A83206BC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/visualinfo.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		DBA4DD503ADB4DFFBB67352E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				95EA715B23E3464DA29AE51D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_init.m */,
+				209B1EC9DB5040078A8217C3 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.m */,
+				A6ADE45A01904C3CAE99426D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_monitor.m */,
+				406577D2A3D940DFAF97A892 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_time.c */,
+				44A2F4C9918F4BD6860756D6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_window.m */,
+				6FDCB385170947D3B3227A2B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/context.c */,
+				7407B7C0BE7047E69349F63F /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.c */,
+				A1D8EF0DD8E04BC58A5843DB /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/init.c */,
+				3B6E7E3E540D486888F6694A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/input.c */,
+				61F0B4888AB24DBF83BD42C2 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/monitor.c */,
+				BF56C22D7AE84107B0C042AC /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.m */,
+				70E854A201E24ED4BDF2DB64 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.c */,
+				B872B345E4C44A22B81C6682 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.c */,
+				4A654657383F488A997D0D78 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/vulkan.c */,
+				57696F19DC6F463CAA23F14B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F316735077FA4ABB88561701 /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				D8469A70A9D4402DA3995337 /* Source Files */,
+				020CE568276D4CB6A5A8D592 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		FC17F3A8B5F441898EE5CEDE = {
+			isa = PBXGroup;
+			children = (
+				A34AF3BCDAF5462E945081B8 /* CGL */,
+				558EF4FF8056494488D417F0 /* ALL_BUILD */,
+				F316735077FA4ABB88561701 /* glew */,
+				21039654C77A41929BED2E80 /* GLFW3 */,
+				2F4433EFB83D47E39BFC968A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E035A659EF146E380C8F01C /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAF281C8086A41009641F288 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				8D90150EBCD04D0B9283A0AC /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 724E6F84E9104F129476D5CB /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3538BD45648B4DF0AFA8EF66 /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CFFD1F03F59490C8834613B /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				005D8B96213F479D8E009D7E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glew;
+			productName = glew;
+			productReference = 16BF5B00D4C7435D92BA1FE9 /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B12BE30ED5D14138BF8F6354 /* CGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79457252B81A48888BFF03BE /* Build configuration list for PBXNativeTarget "CGL" */;
+			buildPhases = (
+				BFC35C3D6FCF498E92300796 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D29BBD6460FF414E9F04B3F8 /* PBXTargetDependency */,
+				4D4C7A673C694DD4ABC4314B /* PBXTargetDependency */,
+				E22D0D14B72A462ABD5FF661 /* PBXTargetDependency */,
+			);
+			name = CGL;
+			productName = CGL;
+			productReference = 3A96785563B543BE97CD9CFC /* CGL */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6484B0F791D8460CB611582E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+			};
+			buildConfigurationList = 9FF55C29772A49169A1C2B92 /* Build configuration list for PBXProject "CGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				61BE779D80034AF5959AEFE4 /* Debug */,
+				2CCEAA232E224AC898436CE3 /* Release */,
+				D342A2B1DDA042C88785BA69 /* MinSizeRel */,
+				9BA704A6F3C94DFDAB48100F /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = FC17F3A8B5F441898EE5CEDE;
+			projectDirPath = ../../CGL;
+			projectRoot = "";
+			targets = (
+				D7057E91860542E08D54118B /* ALL_BUILD */,
+				B12BE30ED5D14138BF8F6354 /* CGL */,
+				734B9CBFF25147F9BA184227 /* ZERO_CHECK */,
+				3538BD45648B4DF0AFA8EF66 /* glew */,
+				0E035A659EF146E380C8F01C /* glfw */,
+				8CDF8AF101A44740AE0B7255 /* install */,
+				1DDBE4CC92DB4AFD8D951E14 /* uninstall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11054AF2688143A8B075FA44 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL -f /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		1D1C80D0C4B048AF9B2C12A1 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1EC17C90C39A416F8104BD36 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		467A97CF0C984555BA1DB4B4 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw -f /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		46C3E6D8F3C543B9B3540F5B = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B0ADC016236543629F83B8B3 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		BF42074A3C67403999BE3831 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL -f /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		D296A2455AC44F4D95A0F4C5 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL -f /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		005D8B96213F479D8E009D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D214527CCE394BC6864A0208 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glew.c */,
+				21B8D0FF0FBB4C328D06F22C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/glewinfo.c */,
+				0D53F33958DC451D823E5F57 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/src/visualinfo.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D90150EBCD04D0B9283A0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD48862AF504C3E838B8B16 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_init.m */,
+				4E8F57F007144E7B8EEE40D6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_joystick.m */,
+				784D331F81484537AC80BAA9 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_monitor.m */,
+				148891FF250943838676B35E /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_time.c */,
+				C78B956D243A41FDA46307B5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/cocoa_window.m */,
+				3DD355B791F643C9B1D2944A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/context.c */,
+				FD3E196540B84C5DB1818FAA /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/egl_context.c */,
+				CFB84AF270594967A8842AD5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/init.c */,
+				7D196DCA596444CDB220CD9E /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/input.c */,
+				FDEE11E31D99436D82B69718 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/monitor.c */,
+				6F161B7ADD5E45F7BC95AEA6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/nsgl_context.m */,
+				D67E55FD28A2488ABB5AEBB5 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/osmesa_context.c */,
+				7C65CF70962F4FACB7585FED /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/posix_thread.c */,
+				86BD770BF81A414DB6028E03 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/vulkan.c */,
+				CE28F557A08F464BB5F08787 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFC35C3D6FCF498E92300796 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9577D6B25FA0482189F7162C /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/base64.cpp */,
+				6AE79273C7C14C16AC09F48D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/color.cpp */,
+				1B55ACE9DA204C1084EBDFDF /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/complex.cpp */,
+				347D55E8729049E09297CA9B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/lodepng.cpp */,
+				671814DF2AFA410CA499BB40 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix3x3.cpp */,
+				C12ECD20011540D8B238C996 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/matrix4x4.cpp */,
+				2AA5C47A61DF42089E360B1D /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdfont.cpp */,
+				2052B3B953C54062BB4F1608 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/osdtext.cpp */,
+				7A09A65B50084F59A5C34B53 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/path.cpp */,
+				6329CDD277E4491E96AB077A /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/quaternion.cpp */,
+				66C2A9D09F9148A6B570590B /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/spectrum.cpp */,
+				89F39356B9BE41828997EBD6 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/tinyxml2.cpp */,
+				A22719C76F28478DB55B2A18 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector2D.cpp */,
+				D58E17AB77D84EA7926635D0 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector3D.cpp */,
+				8BFF9B4715BC4B0FABA32EAD /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/vector4D.cpp */,
+				86BA7AAA67284772B4BCE263 /* /Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/src/viewer.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BDFBCE78547446583E921C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 734B9CBFF25147F9BA184227 /* ZERO_CHECK */;
+			targetProxy = 0444657F6EF4409BBCCA569F /* PBXContainerItemProxy */;
+		};
+		4D4C7A673C694DD4ABC4314B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E035A659EF146E380C8F01C /* glfw */;
+			targetProxy = C99AA38659E24A5B84FA8B30 /* PBXContainerItemProxy */;
+		};
+		5226C96BC66E4BFB9A9BCA7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E035A659EF146E380C8F01C /* glfw */;
+			targetProxy = F6AD9047F01348E0BEB7CDD5 /* PBXContainerItemProxy */;
+		};
+		834A0CC19F0E4B7387E9F1EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3538BD45648B4DF0AFA8EF66 /* glew */;
+			targetProxy = BE13094182C84D49A279D24B /* PBXContainerItemProxy */;
+		};
+		9580AD4793C94BA4A00BCC0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7057E91860542E08D54118B /* ALL_BUILD */;
+			targetProxy = 446F7C6073974F24A029E562 /* PBXContainerItemProxy */;
+		};
+		A8894C2C536F4AF1AE17E656 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B12BE30ED5D14138BF8F6354 /* CGL */;
+			targetProxy = CF7F99D7A0714F5FAD51CD4A /* PBXContainerItemProxy */;
+		};
+		D29BBD6460FF414E9F04B3F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3538BD45648B4DF0AFA8EF66 /* glew */;
+			targetProxy = 03D4D0C8EA534B5F9F948E33 /* PBXContainerItemProxy */;
+		};
+		E22D0D14B72A462ABD5FF661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 734B9CBFF25147F9BA184227 /* ZERO_CHECK */;
+			targetProxy = DDCAF3CD0CD249C2A050296F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015C1BFC0A124DF9B9534BCD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		11634280B2BB401BB0CAC1C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		1249028ECB3245CE83D5D100 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/build";
+			};
+			name = Release;
+		};
+		2F94B731724B46FC9E402F9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		31C3370D87E442E581422D2A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include/CGL",/usr/local/include/freetype2,"/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64         -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		37CB919D19FE4AF0A38D0B3A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3909998D07F04F958782B01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3BD19B1BFC304F5BAF0E127C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		41318FBEECEB48B2924C1912 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4735B74A6EE347E4ACE0BA31 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/build";
+			};
+			name = MinSizeRel;
+		};
+		504B5425435948F7803B683D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		54152D2545294D0091C63AFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5ADAB8A52A2949E2BA86DDA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include/CGL",/usr/local/include/freetype2,"/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64         -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6517515B729A4E25B5D1FC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		6D3352719D394E7FBC06530F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/build";
+			};
+			name = Debug;
+		};
+		743C410916DB4B5FBDA1EF09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		7AF50FC083A848D0A1CD3890 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7FDB828364984EB8B1B88739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		80CEC8CAFCBC444CA3A66D86 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8623497A3F25463AAE0087FB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		89567E96C6E24C6D9D8ACCF8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8ADA0A64DCEB4C90A8C8CCA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 4;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include/CGL",/usr/local/include/freetype2,"/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64         ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		A384347B29C34C01A79E48C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		AE76D14BC42F458EB6F3253A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/src","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall '-std=c99'  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B174425DB6764AD9847D0634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BBCF871640ED4F33B993C527 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/build";
+			};
+			name = RelWithDebInfo;
+		};
+		CD7A9DC2A03A436F8A9272D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		E1941C794BE24A3DACED386C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		ECCA73F39C554D3A89D4BD45 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/include/CGL",/usr/local/include/freetype2,"/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include","/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glfw/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64            -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EEFF31B07D4D4F3FA03581BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F47F41890A7F40E1BC28D156 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F543688488694DD6AF9C3A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/max/Desktop/cs284/p1-rasterizer-sp20-MaxTang233/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		557A542642A74C558FDE181C /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B174425DB6764AD9847D0634 /* Debug */,
+				3909998D07F04F958782B01F /* Release */,
+				8623497A3F25463AAE0087FB /* MinSizeRel */,
+				7AF50FC083A848D0A1CD3890 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		62574C11A61E43D3A16AC72F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				743C410916DB4B5FBDA1EF09 /* Debug */,
+				54152D2545294D0091C63AFC /* Release */,
+				504B5425435948F7803B683D /* MinSizeRel */,
+				37CB919D19FE4AF0A38D0B3A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		79457252B81A48888BFF03BE /* Build configuration list for PBXNativeTarget "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ADA0A64DCEB4C90A8C8CCA2 /* Debug */,
+				5ADAB8A52A2949E2BA86DDA2 /* Release */,
+				31C3370D87E442E581422D2A /* MinSizeRel */,
+				ECCA73F39C554D3A89D4BD45 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7CFFD1F03F59490C8834613B /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEFF31B07D4D4F3FA03581BB /* Debug */,
+				F543688488694DD6AF9C3A6C /* Release */,
+				F47F41890A7F40E1BC28D156 /* MinSizeRel */,
+				015C1BFC0A124DF9B9534BCD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9FF55C29772A49169A1C2B92 /* Build configuration list for PBXProject "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D3352719D394E7FBC06530F /* Debug */,
+				1249028ECB3245CE83D5D100 /* Release */,
+				4735B74A6EE347E4ACE0BA31 /* MinSizeRel */,
+				BBCF871640ED4F33B993C527 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D059E7EE300A4397A4B138E9 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD7A9DC2A03A436F8A9272D4 /* Debug */,
+				2F94B731724B46FC9E402F9A /* Release */,
+				80CEC8CAFCBC444CA3A66D86 /* MinSizeRel */,
+				3BD19B1BFC304F5BAF0E127C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D0BBC574A22348EAB89B85D6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FDB828364984EB8B1B88739 /* Debug */,
+				11634280B2BB401BB0CAC1C2 /* Release */,
+				89567E96C6E24C6D9D8ACCF8 /* MinSizeRel */,
+				E1941C794BE24A3DACED386C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FAF281C8086A41009641F288 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6517515B729A4E25B5D1FC13 /* Debug */,
+				A384347B29C34C01A79E48C3 /* Release */,
+				AE76D14BC42F458EB6F3253A /* MinSizeRel */,
+				41318FBEECEB48B2924C1912 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6484B0F791D8460CB611582E /* Project object */;
+}

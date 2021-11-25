@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css"> 
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>Rasterizer</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+
+<body>
+
+<!-- <h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2018</h1> -->
+<h1 align="middle">Rasterizer Study</h1>
+<h2 align="middle">Di Tang</h2>
+
+<br><br>
+
+<div>
+
+<h2 align="middle">Overview</h2>
+<p>For this project we implemented a raster that can performing different sampling methods such as supersampling, sample nearest, sample bilinear and sample with bilinear level etc.  Each of which has its pros and cons. Some sample methods like naïve sampling cam caused obvious aliasing issue but has a good runtime, whereas supersampling renders an iamge with better quality but the runtime increases proportionally to the sample rate. For the implement process, it is hard to debug when it comes to bad access, supersampling part and mipmap part are the hardest for me. It took me awhile to figure out the correct size of supersample buffer and the correct index to access the mipmap.</p>
+
+<h2 align="middle">Section I: Rasterization</h2>
+
+<h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
+
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Iterate through the points within the bounding box of the triangle with step-size 1. Start with <em>x = min(min(x0, x1),x2)</em>, <em>y = min(min(y0, y1),y2)</em>, terminate at <em>x < max(max(x0,x1),x2)</em> and <em>y< max(max(y0,y1),y2)</em>. for each point calculate if the point is inside the triangle using line equation: <em>l0 = -(x-x0)*(y1-y0) + (y-y0)*(x1-x0)</em>; <em>l1 = -(x-x1)*(y2-y1) + (y-y1)*(x2-x1)</em>; <em>l2 = -(x-x2)*(y0-y2) + (y-y2)*(x0-x2)</em>.And check if <em>(l0 > 0 && l1 > 0 && l2 >0)</em> for clockwise direction and <em>(l0 < 0 && l1 < 0 && l2 <0)</em> for counterclockwise direction. If the point fulfill the check condition above then using <em>fill_pixel(x, y, color)</em> to fill the color for that pixel.<br><br>
+  <span style=" font-weight: bold;">Conclusion:</span><br>The run time is equal to checks each sample within the bounding box of the triangle since the initial value of <em>x</em> and <em>y</em> for the nested for loop are minimum value of <em>x</em> and minimum value of <em>y</em>, terminal value are maximum value of <em>x</em> and maximum value of <em>y</em>. <br><br>
+<span style=" font-weight: bold;">Extra:</span><br>
+Initially I calculated <em>sqrt(sample_rate)</em> every time when I enter the nested loops, and it drastically slowed down my algorithm. With a simple modification, which is precalculated the <em>sqrt(sample_rate)</em> before the for loop, the runtime decreased noticeably.<br><br>
+
+
+Below are 4 test cases for part1:</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/task1_test3.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test3</figcaption>
+      </td>
+      <td>
+        <img src="images/task1_test4.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test4</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/task1_test5.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test5</figcaption>
+      </td>
+      <td>
+        <img src="images/task1_test6.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test6</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<h3 align="middle">Part 2: Antialiasing triangles</h3>
+
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Supersampling is an anti-aliasing method  used to remove aliasing (jagged and pixelated edges from part1)from images rendered in computer programs that generate imagery. For each pixel, instead of sampling once, we can now sample <em>sample_rate</em> times and average the colors.<br>
+Iterate through the points within the bounding box of the triangles based on what we have on part1. Add an additional nested inner loop start at <em>sx = x + 1/(2*sqt)</em> and <em>sy = y + 1/(2*sqt)</em>, step size <em>1/sqrt(sample_rate)</em> to iterate through number of <em>sample_rate</em> points within each pixel and keep track of the index of the subpixel. For each point using the line equation same as part1 to calculate if they are inside of triangle. If a subpixel is inside the triangle, store the color value of the subpixel to a data structure <em>supersample_buffer</em>. After stored all the color value for each sub pixel, we can calculate the average value for each pixel and finally fill the color for each pixel.<br><br><span style=" font-weight: bold;">Data Structure:</span><br>A specific data structure <em>supersample_buffer</em> was added to store the color value of subpixels.Notice that the size of <em>supersample_buffer</em>  is <em>sample_rate*(y * width + x) + s</em> since now each pixel has <em>sample_rate</em> numbers of subpixel, we need additional memories to store all the value<br><br><span style=" font-weight: bold;">Conclusion:</span><br><em>supersample_buffer</em> requires additional memories (<em>sample_rate</em>*original number of pixel), and the algorithm requires additional time to iterate through the subpixels as well as calculate the average color for each pixel. After super sampling we can observe that for test4, as sample rate increase, the edge of the triangles become smoother and the corner pixels become more continuous. <br><br>Below are 4 test cases for part2: 
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/task1_test4.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test4 at rate 1</figcaption>
+      </td>
+      <td>
+        <img src="images/task2_rate4.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test4 at rate 4</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/task2_rate9.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test 4 at rate 9</figcaption>
+      </td>
+      <td>
+        <img src="images/task2_rate16.png" align="middle" width="400px"/>
+        <figcaption align="middle">rasterize triangle test4 at rate 16</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h3 align="middle">Part 3: Transforms</h3>
+
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Implemented functions (<em>ranslate</em>, <em>scale</em>, <em>rotate</em>) using the matrices we discussed in the lecture to manipulate the geometries in <em>.svg</em> files.<br><br><span style=" font-weight: bold;">Conclusion:</span><br>After implemented the functions we can see a red robot as below. After changed the colors and the location of  for each part of the robot we can create a robot with customized color and celebrating for finishing the project1.<br><br>Below are drawings of robot for part3:</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/robot1.png" align="middle" width="400px"/>
+        <figcaption align="middle">original robot</figcaption>
+      </td>
+      <td>
+        <img src="images/robot2.png" align="middle" width="400px"/>
+        <figcaption align="middle">yay!!!</figcaption>
+      </td>
+    </tr>
+    <br>
+
+  </table>
+</div>
+
+<h2 align="middle">Section II: Sampling</h2>
+
+<h3 align="middle">Part 4: Barycentric coordinates</h3>
+
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Barycentric coordinates can be used to linearly interpolate the color (or coordinates, texture etc.) of any point located on the triangle with three scalars <em>P= αA+ βB+ γC</em>. By using the algorithm, we can get a smooth interpolation of colors across the triangle with corners that have different colors, as the example picture shows below. To compute the color of this point using barycentric coordinates we use the following equation discusses in the lecture:<br>
+  <em>α = (-(x - x1)*(y2-y1)+(y-y1)*(x2-x1))/(-(x0-x1)*(y2-y1)+(y0-y1)*(x2-x1))</em>;<br><em>β = (-(x - x2)*(y0-y2)+(y-y2)*(x0-x2))/(-(x1-x2)*(y0-y2)+(y1-y2)*(x0-x2))</em>;<br>
+  <em>γ = 1 - α – β</em>.<br><br>
+  Below are test for part4:
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/task4_eg.png" align="middle" width="400px"/>
+        <figcaption align="middle">Barycentric interpolation example</figcaption>
+      </td>
+      <td>
+        <img src="images/task4.png" align="middle" width="400px"/>
+        <figcaption align="middle">test 7</figcaption>
+      </td>
+
+    </tr>
+    <br>
+
+  </table>
+</div>
+
+
+<h3 align="middle">Part 5: "Pixel sampling" for texture mapping</h3>
+
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Pixel sampling is  the method used to determine the texture color for a texture mapped pixel. In addition to iterate through the all the pixel within the bounding box same as part1 and part2, we need to calculate <em>α</em>, <em>β</em> and <em>γ</em> from <em>x-y</em> space after checking the position of each pixel. Use scale factors calculated form barycentric coordinate, we can get the <em>(tu,tv)</em> coordinate. The <em>(tu,tv)</em> are the coordinate from <em>u-v</em> space, which is the texel space. So that we mapped coordinates from <em>x-y</em> space to <em>u-v</em> space. Then using <em>(tu,tv)</em> to sample the texel at coordinate <em>(x,y)</em>. There are two ways to sample the texel:<br><br>
+
+<span style=" font-weight: bold;">Sample nearest - </span>
+This method will sample the texel which is nearest to the <em>(tu,tv)</em>. Inside the function <em>sample_nearest</em>, return the value of <em>mipmap[level].get_texel((int)floor(uv.x* m),(int)floor(uv.y*mul_y))</em>, where <em>xul_x</em> and <em>mul_y</em> are scale factors that scale <em>u-v</em> coordinate to <em>x-y</em> space.<br><br>
+
+<span style=" font-weight: bold;">Sample bilinear - </span>This method will calculate four nearest points (<em>u00</em>, <em>u01</em>, <em>u10</em>, <em>u11</em>) of the u-v coordinate and interpolate their colors. Inside the sample_bilinear function, we can use floor function and ceil function to calculate <em>u00</em>, <em>u01</em>, <em>u10</em>, <em>u11</em>, and scale their coordinate accordingly. When getting the color for each point, for example to get the color at <em>u10</em> we can do <em>c10 = mipmap[level].get_texel(u10.x,u10.y)</em>. Then we interpolate two color values at a time using lerp function <em>c = (1-t)*c0 + t*c1</em> where t is for <em>(0,1)</em> and proportional to the distance from of <em>u00/u01/u10/u11</em> to <em>(tu,tv)</em>. Lastly pass the final color back to <em>rasterize_textured_triangle</em>.<br><br>
+
+<span style=" font-weight: bold;">Conclusion:</span><br>By comparing the pictures 1 and 3 below, bilinear sampling and nearest sampling at rate 1, we can observe that bilinear sampling is clearly better than nearest sampling. Since the bilinear sampling interpolated color value of 4 pixels, the edge is much smoother than just using the nearest sampling. When we increase the sample rate to 16, aliasing was emerges for both nearest sampling and bilinear sampling. <br><br>
+Below are test for part5:
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/task5_test5_bi.png" align="middle" width="400px"/>
+        <figcaption align="middle">test5 bilinear pixel interpolation sampling at rate 1</figcaption>
+      </td>
+      <td>
+        <img src="images/task5_test5_bi16.png" align="middle" width="400px"/>
+        <figcaption align="middle">test5 bilinear pixel interpolation sampling at rate 16</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/task5_test5_nearest.png" align="middle" width="400px"/>
+        <figcaption align="middle">test5 nearest pixel sampling at rate 1</figcaption>
+      </td>
+      <td>
+        <img src="images/task5_test5_nearest16.png" align="middle" width="400px"/>
+        <figcaption align="middle">test5 nearest pixel sampling at rate 16</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<h3 align="middle">Part 6: "Level sampling" with mipmaps for texture mapping</h3>
+<p class="description"><span style=" font-weight: bold;">Algorithm:</span><br>Level sampling is a method to optimize our render quality by sampling the texel at corresponding mipmap level. Mipmap are sequences of images of a same image with different resolution. As the level increases the resolution decreases progressively. Inside the function <em>rasterize_textured_triangle</em> we need to calculate the <em>sp.p_dx_uv</em>, <em>sp.p_dy_uv</em> and <em>sp.p_uv</em>. Where <em>p_dx_uv</em> is the coordinate of <em>(x+1,y)</em> mapped to <em>u-v</em> space, <em>p_dy_uv</em> is the coordinate of <em>(x, y+1)</em> mapped to <em>u-v</em> space and <em>p_uv</em> is <em>(tu,tv)</em> in part5. So that <em>p_dx_uv - sp.p_uv = (du/dx, dv/dx)</em> and <em>sp.p_dy_uv - sp.p_uv = (du/dy, dv/dy)</em>. Then we use calculate the level using <em>level = log2(max(sqrt(dudx*dudx + dvdx*dvdx), sqrt(dudy*dudy + dvdy*dvdy)))</em>. There are also two methods to calculate the color based on the level:<br><br>
+
+<span style=" font-weight: bold;">Nearest level - </span>
+After calculated the level value, we can round it to the closest integer and pass into either nearest sampling or bilinear sampling function based on the inputs.<br><br>
+
+<span style=" font-weight: bold;">Linear level - </span>
+In this case, we can calculate the <em>floor</em> value of <em>level</em> and <em>ceil</em> value of <em>level</em>, then pass these two values into bilinear sampling function to get color <em>c1</em> and color <em>c2</em>. Lastly, we interpolate these two values again using lerp function to get the final color value.<br><br>
+
+<span style=" font-weight: bold;">Conclusion:</span><br>
+When using level 0 nearest sampling, there are obvious aliasing appears where the texture is distorted by the underline object. When using nearest level with nearest sampling, the effect of aliasing decreases since we are able to use the texel from higher level this time. When using nearest level with bilinear sampling we can further reduce the aliasing by interpolate the neighbor colors and make the color transition more smoothly. Finally, using the bilinear level gives us the best effect since we are able to interpolate the color directly from texels of two consecutive levels.<br>
+However, if the original texture size is x, we need 4/3x storage overhead to store the entire levels.
+<br><br>
+Below are test for part6:
+</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="images/task6_0l_ns.png" align="middle" width="400px"/>
+        <figcaption align="middle">0 level with nereast sampling</figcaption>
+      </td>
+      <td>
+        <img src="images/task6_nl_ns.png" align="middle" width="400px"/>
+        <figcaption align="middle">nereast level with nereast sampling</figcaption>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <img src="images/task6_nl_bs.png" align="middle" width="400px"/>
+        <figcaption align="middle">nereast level with bilinear sampling</figcaption>
+      </td>
+      <td>
+        <img src="images/task6_bl.png" align="middle" width="400px"/>
+        <figcaption align="middle">bilinear level</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<!-- <h2 align="middle">Section III: Art Competition</h2>
+<p>If you are not participating in the optional art competition, don't worry about this section!</p>
+
+<h3 align="middle">Part 7: Draw something interesting!</h3> -->
+
+</body>
+</html>
